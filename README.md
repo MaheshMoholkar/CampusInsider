@@ -95,5 +95,3 @@ This project is licensed under the [MIT License](LICENSE).
 - Angular - [https://angular.io/](https://angular.io/)
 - Bootstrap - [https://getbootstrap.com/](https://getbootstrap.com/)
 - Firebase - [https://firebase.google.com/](https://firebase.google.com/)
-
-Feel free to modify this README file based on your specific project requirements. Happy coding!
