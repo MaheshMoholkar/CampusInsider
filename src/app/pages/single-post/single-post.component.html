@@ -3,74 +3,25 @@
     <div class="col-md-9">
       <div class="card shadow-effect">
         <img
-          src="https://images.pexels.com/photos/1174932/pexels-photo-1174932.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src="{{ postData.postImgPath }}"
           alt=""
           class="card-img-top img-fluid"
         />
         <div class="card-body">
-          <small class="bg-light text-danger text-center"> Design </small>
+          <small class="bg-light text-danger text-center">
+            {{ postData.category.category }}
+          </small>
           <small class="bg-light text-success text-center ml-2">
             Featured
           </small>
           <small class="bg-light text-info text-center ml-2">
-            Views - 124
+            Views - {{ postData.views }}
           </small>
           <small class="bg-light text-warning text-center ml-2">
-            LAST UPDATED - SEP 28, 2022
+            LAST UPDATED - {{ postData.createdAt.toMillis() | date }}
           </small>
-          <h1 class="mt-3 mb-3">HOW TO START A BLOG IN 2023</h1>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad sint
-            quo autem quia corrupti mollitia accusamus enim! Ipsum possimus
-            sint, a alias nulla dolores ab quos dignissimos aliquid, eos
-            cupiditate! Praesentium accusamus sequi corrupti possimus,
-            reiciendis, nihil eius provident voluptate impedit nam incidunt
-            illo! Laborum totam quo ipsa in laudantium, illo nihil inventore
-            repudiandae saepe possimus neque magni sapiente omnis. Accusamus,
-            nihil doloribus! Optio corporis animi, nostrum pariatur fuga maxime
-            ad aspernatur! Aspernatur, magni voluptas numquam facere accusantium
-            voluptates est mollitia ex aliquam dicta odio doloribus, dignissimos
-            molestiae placeat quae! Ex adipisci reprehenderit obcaecati veniam
-            culpa voluptates tempore quaerat animi voluptatum. Eius quos dolor
-            eveniet animi laborum iste quas consequuntur cumque id laudantium
-            vel, voluptas officia expedita inventore? Dicta voluptas accusamus
-            adipisci doloribus officia atque consequuntur tenetur minus animi
-            unde quod officiis quas tempora aperiam sit optio architecto ipsa,
-            error natus aut quia fugit deserunt doloremque reiciendis. Nisi
-            natus mollitia alias reiciendis, illum nostrum consequatur
-            aspernatur est voluptatum veritatis dicta molestiae? Consequatur
-            deserunt reiciendis nihil vero commodi quibusdam ut ipsum?
-            Voluptates provident earum necessitatibus temporibus non voluptas
-            illo, nesciunt quos unde laboriosam ipsam quam possimus omnis, dolor
-            enim, quisquam excepturi suscipit consectetur. Quaerat accusantium
-            fuga dolor molestias molestiae, totam aliquid, maiores itaque
-            laboriosam consectetur facere illo iusto animi! Minima temporibus
-            placeat ab iure veniam labore incidunt dolore debitis expedita
-            dicta. Soluta distinctio ipsam impedit fuga dolore voluptas sed
-            possimus enim exercitationem numquam non nesciunt, itaque facilis
-            veniam quia tempora fugiat recusandae harum accusantium officia
-            nihil? Qui aut debitis suscipit dolorum sit illum dignissimos
-            molestias, nulla veniam sed libero recusandae laudantium ipsum minus
-            nihil obcaecati fugit? Magnam nesciunt facere quibusdam pariatur
-            suscipit, quam ea tenetur voluptas, minus quos exercitationem error
-            dolorem repudiandae facilis odio corrupti praesentium quasi unde
-            dolorum temporibus odit laboriosam. Eveniet, nobis id adipisci non
-            possimus repudiandae facilis, esse veritatis quos harum laudantium
-            molestiae? Id architecto nemo ad rerum atque distinctio officiis
-            repellendus assumenda porro ab reprehenderit expedita voluptatibus
-            animi est praesentium exercitationem maiores odio blanditiis
-            necessitatibus, optio repellat pariatur. Veritatis ex nam magni,
-            exercitationem nihil molestias facilis cumque corporis aperiam
-            accusantium facere quis asperiores sit. Suscipit quisquam architecto
-            voluptates. Voluptas obcaecati distinctio quae harum provident
-            consectetur possimus vel vero fuga esse eaque quos odit facere,
-            accusamus ea aut nulla officiis totam porro recusandae! Unde
-            asperiores sunt molestiae, quaerat exercitationem rem sequi
-            obcaecati praesentium illo id officia sed facere expedita veritatis
-            blanditiis odio, doloribus tempora sapiente culpa, eum molestias.
-            Atque architecto eligendi at ullam quis blanditiis neque error
-            nulla!
-          </p>
+          <h1 class="mt-3 mb-3">{{ postData.title }}</h1>
+          <p [innerHtml]="postData.content"></p>
         </div>
       </div>
       <app-comment-form></app-comment-form>
