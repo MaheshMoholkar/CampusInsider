@@ -11,7 +11,10 @@
           <small class="bg-light text-danger text-center">
             {{ postData.category.category }}
           </small>
-          <small class="bg-light text-success text-center ml-2">
+          <small
+            class="bg-light text-success text-center ml-2"
+            *ngIf="postData.isFeatured"
+          >
             Featured
           </small>
           <small class="bg-light text-info text-center ml-2">
@@ -28,9 +31,9 @@
       <app-comment-list></app-comment-list>
     </div>
     <div class="col-md-3">
-      <app-post-card></app-post-card>
-      <app-post-card></app-post-card>
-      <app-post-card></app-post-card>
+      <div *ngFor="let similarPost of similarPostArray">
+        <app-post-card [postData]="similarPost"></app-post-card>
+      </div>
     </div>
   </div>
 </div>
