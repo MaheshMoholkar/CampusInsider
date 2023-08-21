@@ -1,1 +1,11 @@
-{}
+{
+  "hosting": {
+    "target": "CampusInsider",
+    "public": "dist\\campus-insider",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

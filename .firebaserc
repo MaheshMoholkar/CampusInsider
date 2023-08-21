@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "campus-insider-edu"
+  },
+  "targets": {
+    "campus-insider-edu": {
+      "hosting": {
+        "CampusInsider": [
+          "campus-insider-edu"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
